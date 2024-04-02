@@ -20,6 +20,7 @@ class Producto(models.Model):
     nombre = models.CharField(verbose_name="Nombre", max_length=100)
     precio = models.FloatField(verbose_name="Precio")
     stock_actual = models.IntegerField(verbose_name="Stock")
+    proveedor = models.ForeignKey(Proveedor, on_delete=models.CASCADE, null=False)
     class Meta:
         db_table = "Productores"
         verbose_name="Productor"
