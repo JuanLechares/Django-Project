@@ -14,17 +14,17 @@ class Proveedor(models.Model):
         verbose_name_plural="Proveedores" 
         
     def __str__(self) -> str:
-        return f"{self.nombre} {self.apellido} - DNI: {self.dni}"
+        return f"{self.nombre} {self.apellido}"
     
 class Producto(models.Model):
     nombre = models.CharField(verbose_name="Nombre", max_length=100)
-    precio = models.FloatField(verbose_name="Precio")
+    precio = models.DecimalField(verbose_name="Precio", max_digits=10, decimal_places=2)
     stock_actual = models.IntegerField(verbose_name="Stock")
     proveedor = models.ForeignKey(Proveedor, on_delete=models.CASCADE, null=False)
     class Meta:
-        db_table = "Productores"
-        verbose_name="Productor"
-        verbose_name_plural="Productores" 
+        db_table = "Productos"
+        verbose_name="Producto"
+        verbose_name_plural="Productos" 
         
     def __str__(self):
-        return f"{self.nombre} - $ {self.precio} - STOCK: {self.stock_actual}"
+        return f"{self.nombre}"
