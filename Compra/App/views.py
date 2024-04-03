@@ -7,7 +7,7 @@ def Index(request):
     return render(request, "index.html")
 
 def Producto(request):
-    return HttpResponse("listado de productos")
+    return render(request, "listadoProductos.html")
 
 def Proveedores(request):
-    return HttpResponse("listado de proveedores")
+    return render(request, "listadoProveedores.html")
