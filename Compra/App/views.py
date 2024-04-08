@@ -1,7 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Proveedor
 
 # Create your views here.
+
+#Productos
 
 def Index(request):
     return render(request, "index.html")
@@ -9,11 +11,16 @@ def Index(request):
 def Producto(request):
     return render(request, "listadoProductos.html")
 
-def Proveedores(request):
-    return render(request, "listadoProveedores.html")
 
 def ProductosForm(request):
     return render(request, "formProductos.html")
 
+#Proveedores
+
+def Proveedores(request):
+    proveedores = Proveedor.objects.all()
+    return render(request, "listadoProveedores.html", {"proveedores": proveedores})
+
 def ProveedoresForm(request):
     return render(request, "formProveedores.html")
+
