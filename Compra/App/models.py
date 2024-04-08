@@ -21,6 +21,7 @@ class Producto(models.Model):
     precio = models.DecimalField(verbose_name="Precio", max_digits=10, decimal_places=2)
     stock_actual = models.IntegerField(verbose_name="Stock")
     proveedor = models.ForeignKey(Proveedor, on_delete=models.CASCADE, null=False)
+    
     class Meta:
         db_table = "Productos"
         verbose_name="Producto"
@@ -28,3 +29,4 @@ class Producto(models.Model):
         
     def __str__(self):
         return f"{self.nombre}"
+    

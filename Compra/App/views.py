@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Proveedor
-
+from .models import Producto
 # Create your views here.
 
 #Productos
@@ -8,8 +8,9 @@ from .models import Proveedor
 def Index(request):
     return render(request, "index.html")
 
-def Producto(request):
-    return render(request, "listadoProductos.html")
+def ProductoListado(request):
+    productos = Producto.objects.all()
+    return render(request, "listadoProductos.html", {'productos': productos})
 
 
 def ProductosForm(request):

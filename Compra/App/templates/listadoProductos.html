@@ -27,13 +27,15 @@
         </tr>
       </thead>
       <tbody>
+        {% for producto in productos %}
         <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
+          <th scope="row">{{ producto.id }}</th>
+          <td>{{ producto.nombre }}</td>
+          <td>{{ producto.precio }}</td>
+          <td>{{ producto.stock_actual }}</td>
+          <td>{{ producto.proveedor.nombre }}</td> <!-- Aquí accedes al campo 'nombre' del proveedor -->
         </tr>
+        {% endfor %}
       </tbody>
     </table>
   </div>
