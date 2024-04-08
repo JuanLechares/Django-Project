@@ -11,3 +11,9 @@ def Producto(request):
 
 def Proveedores(request):
     return render(request, "listadoProveedores.html")
+
+def ProductosForm(request):
+    return render(request, "formProductos.html")
+
+def ProveedoresForm(request):
+    return render(request, "formProveedores.html")
