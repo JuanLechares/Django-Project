@@ -18,7 +18,7 @@ def ProductosForm(request):
 
 #Proveedores
 
-def Proveedores(request):
+def ProveedoresListado(request):
     proveedores = Proveedor.objects.all()
     return render(request, "listadoProveedores.html", {"proveedores": proveedores})
 
