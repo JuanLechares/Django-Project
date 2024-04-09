@@ -1,6 +1,6 @@
 Nombre y apellido: Juan Bautista Lechares <br>
-curso: python
-comision:34 
-horario: lunes y miercoles 19 a 21
-profesor: Guido Pasciucco
+curso: python <br>
+comision:34  <br>
+horario: lunes y miercoles 19 a 21 <br>
+profesor: Guido Pasciucco <br>
 
